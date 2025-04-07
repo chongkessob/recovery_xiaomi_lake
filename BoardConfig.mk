@@ -195,4 +195,4 @@ TW_INCLUDE_RESETPROP := true
 TW_LOAD_VENDOR_BOOT_MODULES := true
 
 # Maintainer
-TW_DEVICE_VERSION := takashiiprjkt/Nino
+TW_DEVICE_VERSION := Chongkessob - Lake
