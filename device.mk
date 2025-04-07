@@ -101,11 +101,3 @@ TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1)\")
 
 TW_LOAD_VENDOR_MODULES := "ft8057m_spi.ko ft8057p_spi.ko xiaomi_touch.ko lct_tp.ko icnl9916_spi.ko nt36528_spi.ko"
-
-# Overrides
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.device=$(PRODUCT_RELEASE_NAME)
-
-# Use /product/etc/fstab.postinstall to mount system_other.
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.postinstall.fstab.prefix=/system
