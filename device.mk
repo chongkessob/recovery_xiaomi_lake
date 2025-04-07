@@ -64,7 +64,8 @@ PRODUCT_PACKAGES_DEBUG += \
 TW_INCLUDE_FASTBOOTD := true
 
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
 
 # Health Hal
 PRODUCT_PACKAGES += \
@@ -100,10 +101,6 @@ TW_LOAD_VENDOR_MODULES_EXCLUDE_GKI := true
 TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1)\")
 
 TW_LOAD_VENDOR_MODULES := "ft8057m_spi.ko ft8057p_spi.ko xiaomi_touch.ko lct_tp.ko icnl9916_spi.ko nt36528_spi.ko"
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
 
 # Overrides
 PRODUCT_PROPERTY_OVERRIDES += \
